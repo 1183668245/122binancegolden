@@ -5,7 +5,7 @@ import path from "node:path";
 
 dotenv.config();
 
-const DEFAULT_OUTPUT_PATH = path.resolve("frontend", "rank-addresses.json");
+const DEFAULT_OUTPUT_PATH = path.resolve("rank-addresses.json");
 const BUY_TICKET_SELECTOR = hre.ethers.id("buyTicket(uint16)").slice(0, 10);
 const DEFAULT_DEPLOY_FROM_BLOCK = process.env.RANK_DEFAULT_FROM_BLOCK ? Number(process.env.RANK_DEFAULT_FROM_BLOCK) : null;
 const CHUNK_SIZE = Number(process.env.RANK_SCAN_CHUNK_SIZE || 50);
