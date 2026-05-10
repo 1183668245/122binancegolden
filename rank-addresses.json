@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "network": "bscTestnet",
+  "chainId": 97,
+  "vaultAddress": "0x2Bb1C283826371b12A7255381bE545187658E4D8",
+  "updatedAt": "2026-05-09T04:43:36.796Z",
+  "lastScannedBlock": 106352883,
+  "buyTicketSelector": "0x4eefee34",
+  "addressCount": 0,
+  "addresses": [],
+  "players": []
+}
