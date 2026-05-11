@@ -30,6 +30,7 @@ export const config = {
   vaultAddress: mustEnv("VAULT_ADDRESS"),
   port: Number(process.env.PORT || 8787),
   scanStartBlock: process.env.SCAN_START_BLOCK ? Number(process.env.SCAN_START_BLOCK) : null,
+  scanLatestOnly: String(process.env.SCAN_LATEST_ONLY || "false").toLowerCase() === "true",
   scanPollIntervalMs: Number(process.env.SCAN_POLL_INTERVAL_MS || 15000),
   scanChunkSize: Number(process.env.SCAN_CHUNK_SIZE || 40),
   scanConfirmations: Number(process.env.SCAN_CONFIRMATIONS || 3),
