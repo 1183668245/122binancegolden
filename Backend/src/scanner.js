@@ -167,9 +167,11 @@ export function createScanner({ provider, vaultAddress, db, config }) {
     const fromBlock =
       lastScanned !== null
         ? lastScanned + 1
-        : config.scanStartBlock !== null
-          ? config.scanStartBlock
-          : safeLatest;
+        : config.scanLatestOnly
+          ? safeLatest
+          : config.scanStartBlock !== null
+            ? config.scanStartBlock
+            : safeLatest;
 
     if (fromBlock > safeLatest) {
       return { fromBlock, toBlock: safeLatest, found: 0, scannedTo: lastScanned ?? safeLatest };
